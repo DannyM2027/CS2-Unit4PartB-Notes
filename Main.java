@@ -1,6 +1,10 @@
+import java.util.ArrayList;
 public class Main {
 
    public static void main(String []args) {
+
+
+
       
       // 4.7 wrapper classes wrap pirmimitives into objects
       // some objects need objects need methods.
@@ -23,5 +27,42 @@ public class Main {
       String stringyNums2 = "14";
       int parsedI = Integer.parseInt(stringyNums);
       System.out.println(parsedI);
+
+
+// 4.8 arraylist
+// array list is rezisiable, very flex and dynamic, can change it during run too
+
+
+
+
+
+
    }
+
+// ArrayList <type> name = new ArrayList<type>();
+
+   ArrayList<String> toDo = new ArrayList<String>();
+// for numbers, must use wrapper classes not primitives
+   ArrayList<Integer> intList = new ArrayList<Integer>();
+   ArrayList<Double> doubList = new ArrayList<Double>();
+
+
+   // array list methods assume list is an array list
+
+   // list.size returns int, number of items ount
+   int numTasks = toDo.size();
+   System.out.println("# of items on to do lis:" + numTasks);
+   // list.add appends the obj to end of list
+   // returns a boolean
+   toDo.add( "play game ");
+   toDo.add( "rank up" );
+   toDo.add( "lose mind" );
+   System.out.println(toDo.size() );
+   System.out.println( toDo );
+
+   // list.add(index, obj ) inserts the obj
+   // art a specific index
+   toDo.add(1, "die");
+   System.out.println(toDo);
+
 }
