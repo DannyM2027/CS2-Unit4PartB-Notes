@@ -37,7 +37,7 @@ public class Main {
 
 
 
-   }
+   
 
 // ArrayList <type> name = new ArrayList<type>();
 
@@ -65,4 +65,54 @@ public class Main {
    toDo.add(1, "die");
    System.out.println(toDo);
 
+
+   // list.get( int index) returns the igtem
+   // at that specified index
+   String firstItem = toDo.get(0);
+   // return type matches what the arraylist holds
+   System.out.print("do el firsto: " + firstItem);
+
+   // list.set( int index obj new item
+   // replaces item at index w new)
+
+   String replacedItem = toDo.set(0, "dead");
+   System.out.println(toDo);
+   System.out.println("We replaced: " + replacedItem);
+   // list.removal delete the item
+   // shifts all back one
+   String removedItem = toDo.remove(2);
+   System.out.println(toDo);
+   System.out.println("We remoaved: " + removedItem);
+
+
+
+
+   // 4.9 array list TRAversal
+   ArrayList<Integer> scores = new ArrayList<Integer>();
+   scores.add(14);
+   scores.add(33);
+   scores.add(14);
+   System.out.println(scores);
+
+   //encancehe for each loop to visit in order doesnt keep track of current index
+   for( Integer currentScore : scores ) {
+      System.out.println("Test Score: " + currentScore);
+   }
+
+   // typical example: count up alll items
+   double sum = 0;
+   for (Integer score : scores ) {
+      sum = sum + score; // sun += score same thjing
+
+   }
+   double avg = sum / scores.size();
+   System.out.println("Test avg: " + avg);
+
+
+
+
+
+
+
+   }
 }
