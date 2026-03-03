@@ -21,7 +21,7 @@ public class Main {
       //
       System.out.println(Integer.MIN_VALUE);
       System.out.println(Integer.MAX_VALUE);
-      String stringyNums = "14.0";
+      String stringyNums = "13";
       double parsedD = Double.parseDouble(stringyNums);
       System.out.println(parsedD);
       String stringyNums2 = "14";
@@ -108,10 +108,39 @@ public class Main {
    double avg = sum / scores.size();
    System.out.println("Test avg: " + avg);
 
+   //Standard for loop when u need to keep track of the current INDEX
+   // like if u want to use a method set get etc
+   for (int i = 0; i < scores.size(); i++ ) {
+      // get item at current index
+      int currentItem = scores.get(i);
+      int curvedScore = currentItem + 14;
+      scores.set(i, curvedScore);
+
+   }
+   System.out.println(scores);
 
 
 
 
+   // while loop (iterate) until condition is false
+   ArrayList<String> fourteen = new ArrayList<String>();   
+   fourteen.add("fourteenwhat");
+   fourteen.add("fourteenyes");
+   fourteen.add("fourteenok");
+   fourteen.add("fourteenexactly");
+   boolean found = false;
+   int index = 0;
+   while (index < fourteen.size() && found == false ) {
+      if ("fourteenwhat".equals(fourteen.get(index))) {
+         fourteen.remove(index);
+         found = true;
+      }
+      else {
+         index++; // continue through list
+      }
+   }
+
+System.out.println(fourteen);
 
 
    }
